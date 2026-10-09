@@ -51,6 +51,17 @@ streamlit run app.py
 
 Enter a topic, press **Run Workflow** and wait for the accepted blog post.
 
+## 🐳 Run with Docker
+
+The compose file starts the app together with an [Ollama](https://ollama.com/) server:
+
+```bash
+docker compose up --build -d
+docker compose exec ollama ollama pull llama3.2:1b   # first run only
+```
+
+Open http://localhost:8501. Stop everything with `docker compose down`.
+
 ## 📁 Project Structure
 
 ```
